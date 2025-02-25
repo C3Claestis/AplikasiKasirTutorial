@@ -54,7 +54,7 @@ namespace AplikasiKasirTutorial
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
+            Application.Exit();
         }
 
         private void menuLogin_Click(object sender, EventArgs e)
