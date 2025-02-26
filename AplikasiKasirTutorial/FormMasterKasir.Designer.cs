@@ -38,10 +38,10 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonInput = new System.Windows.Forms.Button();
-            this.buttonEdit = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonInput = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -135,16 +135,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Proses";
             // 
-            // buttonInput
+            // buttonClose
             // 
-            this.buttonInput.BackColor = System.Drawing.Color.Lime;
-            this.buttonInput.Location = new System.Drawing.Point(116, 21);
-            this.buttonInput.Name = "buttonInput";
-            this.buttonInput.Size = new System.Drawing.Size(100, 50);
-            this.buttonInput.TabIndex = 0;
-            this.buttonInput.Text = "INPUT";
-            this.buttonInput.UseVisualStyleBackColor = false;
-            this.buttonInput.Click += new System.EventHandler(this.buttonInput_Click);
+            this.buttonClose.BackColor = System.Drawing.Color.Crimson;
+            this.buttonClose.Location = new System.Drawing.Point(486, 21);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(100, 50);
+            this.buttonClose.TabIndex = 3;
+            this.buttonClose.Text = "CLOSE";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.BackColor = System.Drawing.Color.IndianRed;
+            this.buttonDelete.Location = new System.Drawing.Point(358, 21);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(100, 50);
+            this.buttonDelete.TabIndex = 2;
+            this.buttonDelete.Text = "DELETE";
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonEdit
             // 
@@ -157,26 +168,16 @@
             this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
-            // buttonDelete
+            // buttonInput
             // 
-            this.buttonDelete.BackColor = System.Drawing.Color.IndianRed;
-            this.buttonDelete.Location = new System.Drawing.Point(358, 21);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(100, 50);
-            this.buttonDelete.TabIndex = 2;
-            this.buttonDelete.Text = "DELETE";
-            this.buttonDelete.UseVisualStyleBackColor = false;
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.BackColor = System.Drawing.Color.Crimson;
-            this.buttonClose.Location = new System.Drawing.Point(486, 21);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(100, 50);
-            this.buttonClose.TabIndex = 3;
-            this.buttonClose.Text = "CLOSE";
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            this.buttonInput.BackColor = System.Drawing.Color.Lime;
+            this.buttonInput.Location = new System.Drawing.Point(116, 21);
+            this.buttonInput.Name = "buttonInput";
+            this.buttonInput.Size = new System.Drawing.Size(100, 50);
+            this.buttonInput.TabIndex = 0;
+            this.buttonInput.Text = "INPUT";
+            this.buttonInput.UseVisualStyleBackColor = false;
+            this.buttonInput.Click += new System.EventHandler(this.buttonInput_Click);
             // 
             // dataGridView1
             // 

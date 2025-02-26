@@ -92,7 +92,16 @@ namespace AplikasiKasirTutorial
 
         private void barangToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (formBarang == null)
+            {
+                formBarang = new FormMasterBarang();
+                formBarang.FormClosed += new FormClosedEventHandler(formBarang_FormClosed);
+                formBarang.ShowDialog();
+            }
+            else
+            {
+                formBarang.Activate();
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AplikasiKasirTutorial
 {
@@ -17,7 +18,6 @@ namespace AplikasiKasirTutorial
         private SqlCommand command;
         private DataSet dataSet;
         private SqlDataAdapter adapter;
-        private SqlDataReader reader;
 
         private void FormMasterKasir_Load(object sender, EventArgs e)
         {
@@ -34,6 +34,12 @@ namespace AplikasiKasirTutorial
 
         void KondisiAwal()
         {
+            textBox1.Enabled = true;
+            textBox2.Enabled = true;
+            textBox3.Enabled = true;
+            buttonInput.Enabled = true;
+            buttonEdit.Enabled = false;
+
             textBox1.Text = "";
             textBox2.Text = "";
             textBox3.Text = "";
@@ -57,6 +63,7 @@ namespace AplikasiKasirTutorial
             dataGridView1.DataSource = dataSet;
             dataGridView1.DataMember = "TB_KASIR";
             dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.Refresh();
         }
 
@@ -103,6 +110,7 @@ namespace AplikasiKasirTutorial
                 textBox2.Enabled = false;
                 textBox3.Enabled = false;
                 comboBox1.Enabled = false;
+                buttonEdit.Enabled = true;
                 buttonInput.Enabled = false;
                 buttonDelete.Enabled = true;
                 buttonEdit.Text = "EDIT";
@@ -154,6 +162,29 @@ namespace AplikasiKasirTutorial
                 KondisiAwal();
                 buttonEdit.Text = "EDIT";
                 buttonDelete.Enabled = true;
+            }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            // Pastikan semua field terisi sebelum update
+            if (textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "" ||
+            textBox3.Text.Trim() == "" || comboBox1.Text.Trim() == "")
+            {
+                MessageBox.Show("Data tidak boleh kosong!", "Peringatan", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                // Proses update ke database
+                SqlConnection sqlConnection = koneksi.GetConn();
+                command = new SqlCommand("DELETE FROM TB_KASIR WHERE KodeKasir ='" + textBox1.Text + "'", sqlConnection);
+                sqlConnection.Open();
+                command.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil dihapus!", "Informasi", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                KondisiAwal();
             }
         }
     }
