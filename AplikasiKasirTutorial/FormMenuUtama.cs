@@ -13,10 +13,10 @@ namespace AplikasiKasirTutorial
     public partial class FormMenuUtama: Form
     {
         public static FormMenuUtama menuUtama;
-        MenuStrip menuStrip;
         FormLogin formLogin;
         FormMasterKasir formKasir;
         FormMasterBarang formBarang;
+        FormTransJual formTransJual;
 
         private void FormMenuUtama_Load(object sender, EventArgs e)
         {
@@ -35,6 +35,10 @@ namespace AplikasiKasirTutorial
         {
             formBarang = null;
         }
+        void formTransJual_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formTransJual = null;
+        }
 
         void LockMenu()
         {
@@ -44,6 +48,8 @@ namespace AplikasiKasirTutorial
             menuLaporan.Enabled = false;
             menuTransaksi.Enabled = false;
             menuUtility.Enabled = false;
+            toolSST2.Text = "";
+            toolSST4.Text = "";
             menuUtama = this;
         }
 
@@ -101,6 +107,20 @@ namespace AplikasiKasirTutorial
             else
             {
                 formBarang.Activate();
+            }
+        }
+
+        private void penjualanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (formTransJual == null)
+            {
+                formTransJual = new FormTransJual();
+                formTransJual.FormClosed += new FormClosedEventHandler(formTransJual_FormClosed);
+                formTransJual.ShowDialog();
+            }
+            else
+            {
+                formTransJual.Activate();
             }
         }
     }

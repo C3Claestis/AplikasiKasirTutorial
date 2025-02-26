@@ -45,7 +45,13 @@
             this.menuUtility = new System.Windows.Forms.ToolStripMenuItem();
             this.gantiPasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolSST1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolSST2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolSST3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolSST4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -134,8 +140,9 @@
             // penjualanToolStripMenuItem
             // 
             this.penjualanToolStripMenuItem.Name = "penjualanToolStripMenuItem";
-            this.penjualanToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.penjualanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.penjualanToolStripMenuItem.Text = "Penjualan";
+            this.penjualanToolStripMenuItem.Click += new System.EventHandler(this.penjualanToolStripMenuItem_Click);
             // 
             // menuLaporan
             // 
@@ -179,12 +186,50 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.aboutToolStripMenuItem.Text = "About";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.Color.Beige;
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolSST1,
+            this.toolSST2,
+            this.toolSST3,
+            this.toolSST4});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 424);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 26);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolSST1
+            // 
+            this.toolSST1.Name = "toolSST1";
+            this.toolSST1.Size = new System.Drawing.Size(54, 20);
+            this.toolSST1.Text = "KODE :";
+            // 
+            // toolSST2
+            // 
+            this.toolSST2.Name = "toolSST2";
+            this.toolSST2.Size = new System.Drawing.Size(0, 20);
+            // 
+            // toolSST3
+            // 
+            this.toolSST3.Name = "toolSST3";
+            this.toolSST3.Size = new System.Drawing.Size(60, 20);
+            this.toolSST3.Text = "NAMA :";
+            // 
+            // toolSST4
+            // 
+            this.toolSST4.Name = "toolSST4";
+            this.toolSST4.Size = new System.Drawing.Size(0, 20);
+            // 
             // FormMenuUtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenuUtama";
@@ -194,6 +239,8 @@
             this.Load += new System.EventHandler(this.FormMenuUtama_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +264,10 @@
         public System.Windows.Forms.ToolStripMenuItem menuUtility;
         public System.Windows.Forms.ToolStripMenuItem menuLogin;
         public System.Windows.Forms.ToolStripMenuItem menuLogout;
+        private System.Windows.Forms.ToolStripStatusLabel toolSST1;
+        private System.Windows.Forms.ToolStripStatusLabel toolSST3;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        public System.Windows.Forms.ToolStripStatusLabel toolSST2;
+        public System.Windows.Forms.ToolStripStatusLabel toolSST4;
     }
 }

@@ -45,6 +45,8 @@ namespace AplikasiKasirTutorial
                     FormMenuUtama.menuUtama.menuTransaksi.Enabled = true;
                     FormMenuUtama.menuUtama.menuUtility.Enabled = true;
 
+                    FormMenuUtama.menuUtama.toolSST2.Text = reader.GetValue(0).ToString();
+                    FormMenuUtama.menuUtama.toolSST4.Text = reader.GetValue(1).ToString();
                     this.Close();
                 }
                 else
@@ -53,18 +55,6 @@ namespace AplikasiKasirTutorial
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-
-            //if (textBoxUsername.Text == "Admin" && textBoxPassword.Text == "Admin")
-            //{
-            //    FormMenuUtama formMenuUtama = new FormMenuUtama();
-            //    formMenuUtama.Show();
-
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Username atau Password salah", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
