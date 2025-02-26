@@ -39,7 +39,7 @@
             this.labelKasir = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBoxNoJual = new System.Windows.Forms.TextBox();
+            this.textBoxNoBarang = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.labelNamaBarang = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -58,6 +58,8 @@
             this.label21 = new System.Windows.Forms.Label();
             this.labelTotal = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelHargaJumlah = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +85,7 @@
             // labelNoJual
             // 
             this.labelNoJual.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelNoJual.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNoJual.Location = new System.Drawing.Point(148, 75);
             this.labelNoJual.Name = "labelNoJual";
             this.labelNoJual.Size = new System.Drawing.Size(100, 23);
@@ -91,51 +94,54 @@
             // labelTanggal
             // 
             this.labelTanggal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelTanggal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTanggal.Location = new System.Drawing.Point(1042, 75);
             this.labelTanggal.Name = "labelTanggal";
-            this.labelTanggal.Size = new System.Drawing.Size(94, 23);
+            this.labelTanggal.Size = new System.Drawing.Size(123, 23);
             this.labelTanggal.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(936, 75);
+            this.label5.Location = new System.Drawing.Point(966, 75);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.Size = new System.Drawing.Size(70, 23);
             this.label5.TabIndex = 3;
             this.label5.Text = "Tanggal";
             // 
             // labelJam
             // 
             this.labelJam.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelJam.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelJam.Location = new System.Drawing.Point(1042, 108);
             this.labelJam.Name = "labelJam";
-            this.labelJam.Size = new System.Drawing.Size(94, 23);
+            this.labelJam.Size = new System.Drawing.Size(123, 23);
             this.labelJam.TabIndex = 6;
             // 
             // label7
             // 
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(936, 108);
+            this.label7.Location = new System.Drawing.Point(966, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 23);
+            this.label7.Size = new System.Drawing.Size(70, 23);
             this.label7.TabIndex = 5;
             this.label7.Text = "Jam";
             // 
             // labelKasir
             // 
             this.labelKasir.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelKasir.Location = new System.Drawing.Point(994, 141);
+            this.labelKasir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKasir.Location = new System.Drawing.Point(1027, 141);
             this.labelKasir.Name = "labelKasir";
-            this.labelKasir.Size = new System.Drawing.Size(142, 23);
+            this.labelKasir.Size = new System.Drawing.Size(138, 23);
             this.labelKasir.TabIndex = 8;
             // 
             // label9
             // 
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.Location = new System.Drawing.Point(888, 141);
+            this.label9.Location = new System.Drawing.Point(966, 141);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 23);
+            this.label9.Size = new System.Drawing.Size(55, 23);
             this.label9.TabIndex = 7;
             this.label9.Text = "Kasir";
             // 
@@ -146,14 +152,16 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 23);
             this.label10.TabIndex = 9;
-            this.label10.Text = "Nomor Jual";
+            this.label10.Text = "Kode Barang";
             // 
-            // textBoxNoJual
+            // textBoxNoBarang
             // 
-            this.textBoxNoJual.Location = new System.Drawing.Point(148, 180);
-            this.textBoxNoJual.Name = "textBoxNoJual";
-            this.textBoxNoJual.Size = new System.Drawing.Size(60, 22);
-            this.textBoxNoJual.TabIndex = 10;
+            this.textBoxNoBarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNoBarang.Location = new System.Drawing.Point(148, 180);
+            this.textBoxNoBarang.Name = "textBoxNoBarang";
+            this.textBoxNoBarang.Size = new System.Drawing.Size(60, 22);
+            this.textBoxNoBarang.TabIndex = 10;
+            this.textBoxNoBarang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNoJual_KeyPress);
             // 
             // label11
             // 
@@ -167,15 +175,16 @@
             // labelNamaBarang
             // 
             this.labelNamaBarang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelNamaBarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNamaBarang.Location = new System.Drawing.Point(320, 179);
             this.labelNamaBarang.Name = "labelNamaBarang";
-            this.labelNamaBarang.Size = new System.Drawing.Size(347, 23);
+            this.labelNamaBarang.Size = new System.Drawing.Size(252, 23);
             this.labelNamaBarang.TabIndex = 12;
             // 
             // label13
             // 
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label13.Location = new System.Drawing.Point(673, 179);
+            this.label13.Location = new System.Drawing.Point(578, 180);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 23);
             this.label13.TabIndex = 13;
@@ -184,35 +193,39 @@
             // labelHargaJual
             // 
             this.labelHargaJual.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelHargaJual.Location = new System.Drawing.Point(746, 178);
+            this.labelHargaJual.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHargaJual.Location = new System.Drawing.Point(651, 180);
             this.labelHargaJual.Name = "labelHargaJual";
-            this.labelHargaJual.Size = new System.Drawing.Size(100, 23);
+            this.labelHargaJual.Size = new System.Drawing.Size(81, 23);
             this.labelHargaJual.TabIndex = 14;
             // 
             // label15
             // 
             this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label15.Location = new System.Drawing.Point(852, 178);
+            this.label15.Location = new System.Drawing.Point(738, 180);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 23);
+            this.label15.Size = new System.Drawing.Size(56, 23);
             this.label15.TabIndex = 15;
             this.label15.Text = "Jumlah";
             // 
             // textBoxJumlah
             // 
-            this.textBoxJumlah.Location = new System.Drawing.Point(958, 180);
+            this.textBoxJumlah.Location = new System.Drawing.Point(800, 180);
             this.textBoxJumlah.Name = "textBoxJumlah";
             this.textBoxJumlah.Size = new System.Drawing.Size(60, 22);
             this.textBoxJumlah.TabIndex = 16;
+            this.textBoxJumlah.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxJumlah_KeyPress);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1024, 176);
+            this.button1.BackColor = System.Drawing.Color.Yellow;
+            this.button1.Location = new System.Drawing.Point(1063, 169);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 30);
+            this.button1.Size = new System.Drawing.Size(102, 38);
             this.button1.TabIndex = 17;
             this.button1.Text = "INSERT";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -226,12 +239,13 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.SpringGreen;
             this.button2.Location = new System.Drawing.Point(42, 482);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(205, 55);
             this.button2.TabIndex = 19;
             this.button2.Text = "SIMPAN";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // label16
             // 
@@ -252,11 +266,11 @@
             // labelKembali
             // 
             this.labelKembali.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelKembali.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKembali.Location = new System.Drawing.Point(1011, 514);
             this.labelKembali.Name = "labelKembali";
             this.labelKembali.Size = new System.Drawing.Size(154, 23);
             this.labelKembali.TabIndex = 22;
-            this.labelKembali.Text = "Harga";
             // 
             // label18
             // 
@@ -270,38 +284,38 @@
             // labelItem
             // 
             this.labelItem.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelItem.Location = new System.Drawing.Point(865, 482);
+            this.labelItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelItem.Location = new System.Drawing.Point(522, 108);
             this.labelItem.Name = "labelItem";
-            this.labelItem.Size = new System.Drawing.Size(67, 23);
+            this.labelItem.Size = new System.Drawing.Size(77, 23);
             this.labelItem.TabIndex = 24;
             // 
             // label20
             // 
             this.label20.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label20.Location = new System.Drawing.Point(792, 481);
+            this.label20.Location = new System.Drawing.Point(436, 108);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(67, 23);
+            this.label20.Size = new System.Drawing.Size(76, 23);
             this.label20.TabIndex = 25;
-            this.label20.Text = "Item";
+            this.label20.Text = "ITEM";
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
             this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(298, 98);
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(436, 75);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(94, 31);
+            this.label21.Size = new System.Drawing.Size(76, 23);
             this.label21.TabIndex = 26;
             this.label21.Text = "TOTAL";
             // 
             // labelTotal
             // 
             this.labelTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(398, 98);
+            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.Location = new System.Drawing.Point(522, 75);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(511, 31);
+            this.labelTotal.Size = new System.Drawing.Size(189, 18);
             this.labelTotal.TabIndex = 27;
             // 
             // timer1
@@ -309,13 +323,33 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label3
+            // 
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.Location = new System.Drawing.Point(866, 179);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 23);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Total";
+            // 
+            // labelHargaJumlah
+            // 
+            this.labelHargaJumlah.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelHargaJumlah.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHargaJumlah.Location = new System.Drawing.Point(928, 179);
+            this.labelHargaJumlah.Name = "labelHargaJumlah";
+            this.labelHargaJumlah.Size = new System.Drawing.Size(129, 23);
+            this.labelHargaJumlah.TabIndex = 29;
+            // 
             // FormTransJual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.Honeydew;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1177, 565);
+            this.Controls.Add(this.labelHargaJumlah);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -333,7 +367,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.labelNamaBarang);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBoxNoJual);
+            this.Controls.Add(this.textBoxNoBarang);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.labelKasir);
             this.Controls.Add(this.label9);
@@ -363,10 +397,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelJam;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label labelKasir;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBoxNoJual;
+        private System.Windows.Forms.TextBox textBoxNoBarang;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label labelNamaBarang;
         private System.Windows.Forms.Label label13;
@@ -385,5 +418,8 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelHargaJumlah;
+        public System.Windows.Forms.Label labelKasir;
     }
 }

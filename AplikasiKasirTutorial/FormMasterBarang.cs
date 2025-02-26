@@ -38,6 +38,7 @@ namespace AplikasiKasirTutorial
             textBox3.Enabled = true;
             textBox4.Enabled = true;
             textBox5.Enabled = true;
+            comboBox1.Enabled = true;
             buttonInput.Enabled = true;
             buttonEdit.Enabled = false;
 

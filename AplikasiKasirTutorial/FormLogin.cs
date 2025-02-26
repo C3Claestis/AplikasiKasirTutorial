@@ -47,6 +47,8 @@ namespace AplikasiKasirTutorial
 
                     FormMenuUtama.menuUtama.toolSST2.Text = reader.GetValue(0).ToString();
                     FormMenuUtama.menuUtama.toolSST4.Text = reader.GetValue(1).ToString();
+                    
+                    FormTransJual.KodeKasirGlobal = reader.GetValue(1).ToString();
                     this.Close();
                 }
                 else
